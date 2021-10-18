@@ -14,7 +14,8 @@ class Post {
     public function read () {
         $query = 'SELECT
         id,
-        nombre
+        idprofesor,
+        idasignatura
         FROM
         ' . $this->table . '
             ORDER BY

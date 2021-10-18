@@ -1,6 +1,6 @@
 <?php
 include_once '../config/db.php';
-include_once '../data/Profesor.php';
+include_once '../data/ProfeAsignatura.php';
 
 $database = new Database();
 $db = $database->connect();
@@ -19,7 +19,8 @@ if($numeracion > 0) {
 
         $post_item = array(
             'id' => $id,
-            'nombre' => $nombre,
+            'idprofesor' => $idprofesor,
+            'idasignatura' => $idasignatura
         );
         array_push($posts_arr, $post_item);
 
@@ -28,6 +29,6 @@ if($numeracion > 0) {
 } else {
 
     echo json_encode(
-        array('message' => 'No hay datos en la tabla profesores')
+        array('message' => 'No hay datos en la tabla profesores-asignaturas')
     );
 }

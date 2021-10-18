@@ -18,7 +18,7 @@ class Post {
         FROM
         ' . $this->table . '
             ORDER BY
-            nombre ASC';
+            id ASC';
 
         $stmt = $this->conn->prepare($query);
         $stmt->execute();
