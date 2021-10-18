@@ -2,10 +2,7 @@
 
 class Post {
     private $conn;
-    private $table = 'Estudio';
-
-    public $id;
-    public $category_id;
+    private $table = 'ProfesorAsignatura';
 
     public function __construct($db) {
         $this->conn = $db;

@@ -4,9 +4,6 @@ class Post {
     private $conn;
     private $table = 'Estudio';
 
-    public $id;
-    public $category_id;
-
     public function __construct($db) {
         $this->conn = $db;
     }
